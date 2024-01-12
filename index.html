@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Text Extractor</title>
+</head>
+<body>
+    <h1>PDF Text Extractor</h1>
+    <form method="POST">
+        <label for="url">Enter Google Drive PDF URL:</label>
+        <input type="text" name="url" id="url" required="">
+        <button type="submit">Extract Text</button>
+    </form>
+    <hr>
+    <h2>Extracted Text:</h2>
+    <pre>{{ extracted_text }}</pre>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
